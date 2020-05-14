@@ -4,39 +4,29 @@ require(`dotenv`).config({
 
 module.exports = {
   siteMetadata: {
-    siteTitleAlt: `Minimal Blog - Gatsby Theme`,
+    siteTitleAlt: `An Open Plan - Creation in the Making on the Web`,
+    siteTitle: `An Open Plan`,
+    siteHeadline: `An Open Plan - A Manifesto for Working in Public`,
+    siteUrl: `https://anopenplan.com`,
+    siteDescription: `A collection of people working in public, across the internet`,
+    siteLanguage: `en`
   },
   plugins: [
     {
       resolve: `@lekoarts/gatsby-theme-minimal-blog`,
       // See the theme's README for all available options
       options: {
+        blogPath: `/plans`,
         navigation: [
           {
-            title: `Blog`,
-            slug: `/blog`,
+            title: `Plans`,
+            slug: `/plans`,
           },
           {
             title: `About`,
             slug: `/about`,
           },
         ],
-        externalLinks: [
-          {
-            name: `Twitter`,
-            url: `https://twitter.com/lekoarts_de`,
-          },
-          {
-            name: `Instagram`,
-            url: `https://www.instagram.com/lekoarts.de/`,
-          },
-        ],
-      },
-    },
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: process.env.GOOGLE_ANALYTICS_ID,
       },
     },
     `gatsby-plugin-sitemap`,
